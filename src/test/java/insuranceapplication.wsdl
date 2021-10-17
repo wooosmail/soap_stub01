@@ -1,0 +1,45 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:schema="http://nicordesigns.com/ws/schemasT"
+                  xmlns:tns="http://nicordesigns.com/ws/definitionsTT"
+                  targetNamespace="http://nicordesigns.com/ws/definitionsTT"
+>
+
+
+
+
+    <wsdl:types>
+        <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <xsd:import namespace="http://nicordesigns.com/ws/schemasT" schemaLocation="../../main/webapp/WEB-INF/xsd/insuranceapplication.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+
+    <wsdl:message name="InsuranceApplication">
+        <wsdl:part element="schema:InsuranceApplication" name="InsuranceApplication"/>
+
+    </wsdl:message>
+
+    <wsdl:portType name="InsuranceApplication">
+        <wsdl:operation name="Insurance">
+            <wsdl:input message="InsuranceApplication" name="InsuranceApplication"/>
+        </wsdl:operation>
+    </wsdl:portType>
+
+    <wsdl:binding name="InsuranceApplicationBinding" type="tns:InsuranceApplication">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+        <wsdl:operation name="Insurance">
+            <soap:operation soapAction="http://nicordesigns.com/ApplicationInsurance"/>
+            <wsdl:input name="InsuranceApplication">
+                <soap:body use="literal"/>
+            </wsdl:input>
+        </wsdl:operation>
+    </wsdl:binding>
+
+    <wsdl:service name="InsuranceApplicationService">
+        <wsdl:port name="InsuranceApplicationPort" binding="InsuranceApplicationBinding">
+            <soap:address location="http://localhost:8080/insuranceApplicationService"/>
+        </wsdl:port>
+    </wsdl:service>
+
+</wsdl:definitions>
