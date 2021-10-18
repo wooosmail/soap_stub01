@@ -6,4 +6,4 @@
 //
 
 @javax.xml.bind.annotation.XmlSchema(namespace = "http://nicordesigns.com/spring-ws-insurance", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package com.nicordesigns.spring_ws_insurance;
+package com.nicordesigns.ws;

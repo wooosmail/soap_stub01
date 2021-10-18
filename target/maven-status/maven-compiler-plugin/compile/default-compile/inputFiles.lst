@@ -1,6 +1,6 @@
-/Users/suajinwoo/IdeaProjects/spring-ws-insurance/target/generated-sources/xjc/com/nicordesigns/ws/schemas/InsuranceApplication.java
-/Users/suajinwoo/IdeaProjects/spring-ws-insurance/target/generated-sources/xjc/com/nicordesigns/ws/schemas/package-info.java
-/Users/suajinwoo/IdeaProjects/spring-ws-insurance/target/generated-sources/xjc/com/nicordesigns/ws/schemas/WidgetInfoType.java
-/Users/suajinwoo/IdeaProjects/spring-ws-insurance/src/main/java/com/nicordesigns/ws/InsuranceService.java
-/Users/suajinwoo/IdeaProjects/spring-ws-insurance/target/generated-sources/xjc/com/nicordesigns/ws/schemas/ApplicantType.java
-/Users/suajinwoo/IdeaProjects/spring-ws-insurance/target/generated-sources/xjc/com/nicordesigns/ws/schemas/ObjectFactory.java
+/Users/suajinwoo/IdeaProjects/spring-ws-insurance/target/generated-sources/xjc/com/nicordesigns/spring_ws_insurance/ObjectFactory.java
+/Users/suajinwoo/IdeaProjects/spring-ws-insurance/target/generated-sources/xjc/com/nicordesigns/spring_ws_insurance/package-info.java
+/Users/suajinwoo/IdeaProjects/spring-ws-insurance/target/generated-sources/xjc/com/nicordesigns/spring_ws_insurance/InsuranceResponse.java
+/Users/suajinwoo/IdeaProjects/spring-ws-insurance/target/generated-sources/xjc/com/nicordesigns/spring_ws_insurance/WidgetInfoType.java
+/Users/suajinwoo/IdeaProjects/spring-ws-insurance/target/generated-sources/xjc/com/nicordesigns/spring_ws_insurance/InsuranceRequest.java
+/Users/suajinwoo/IdeaProjects/spring-ws-insurance/target/generated-sources/xjc/com/nicordesigns/spring_ws_insurance/ApplicantType.java

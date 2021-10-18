@@ -6,7 +6,7 @@
 //
 
 
-package com.nicordesigns.spring_ws_insurance;
+package com.nicordesigns.ws;
 
 import javax.xml.bind.annotation.XmlRegistry;
 

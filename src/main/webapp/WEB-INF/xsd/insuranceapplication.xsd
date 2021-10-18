@@ -1,16 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <xs:schema attributeFormDefault="unqualified"
            elementFormDefault="qualified"
-           targetNamespace="http://nicordesigns.com/ws/schemas"
+           targetNamespace="http://nicordesigns.com/spring-ws-insurance"
+           xmlns:spr="http://nicordesigns.com/spring-ws-insurance"
            xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:element name="InsuranceApplication" >
-  <xs:complexType>
-    <xs:sequence>
-      <xs:element type="sch:ApplicantType" name="Applicant" xmlns:sch="http://nicordesigns.com/ws/schemas"/>
-      <xs:element type="sch:WidgetInfoType" name="WidgetInfo" xmlns:sch="http://nicordesigns.com/ws/schemas"/>
-    </xs:sequence>
-  </xs:complexType>
-</xs:element>
+
+  <xs:element name="InsuranceRequest" >
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element type="spr:ApplicantType" name="Applicant" />
+        <xs:element type="spr:WidgetInfoType" name="WidgetInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:complexType name="ApplicantType">
     <xs:sequence>
       <xs:element type="xs:string" name="SSN"/>
@@ -25,4 +26,15 @@
     </xs:sequence>
   </xs:complexType>
 
+  <!-- Soap out -->
+  <xs:element name="InsuranceResponse">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute type="xs:string" name="amount"/>
+          <xs:attribute type="xs:string" name="UserID"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

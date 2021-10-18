@@ -26,8 +26,6 @@
         <sws:xsd location="/WEB-INF/xsd/insuranceapplication.xsd"/>
     </sws:dynamic-wsdl>
 
-    <sws:dynamic-wsdl id="getTest" portTypeName="InsuranceService" locationUri="insuranceService" targetNamespace="http://nicordesigns.com/spring-ws-insurance">
-        <sws:xsd location="/WEB-INF/xsd/testXsd.xsd"/>
-    </sws:dynamic-wsdl>
+
 
 </beans>
