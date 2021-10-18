@@ -1,7 +1,2 @@
-package com.nicordesigns.ws;
-
-
-public interface InsuranceService {
-
-    ;
+package com.nicordesigns.ws;public interface InsuranceService {
 }
