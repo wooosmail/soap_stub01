@@ -1,0 +1,67 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:sch="http://nicordesigns.com/spring-ws-insurance" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://nicordesigns.com/spring-ws-insurance" targetNamespace="http://nicordesigns.com/spring-ws-insurance">
+    <wsdl:types>
+        <xs:schema xmlns:spr="http://nicordesigns.com/spring-ws-insurance" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://nicordesigns.com/spring-ws-insurance">
+            <xs:element name="InsuranceRequest">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="Applicant" type="spr:ApplicantType"/>
+                        <xs:element name="WidgetInfo" type="spr:WidgetInfoType"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:complexType name="ApplicantType">
+                <xs:sequence>
+                    <xs:element name="SSN" type="xs:string"/>
+                    <xs:element name="FirstName" type="xs:string"/>
+                    <xs:element name="LastName" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:complexType name="WidgetInfoType">
+                <xs:sequence>
+                    <xs:element name="wgtAmount" type="xs:string"/>
+                    <xs:element name="wgtContractNumber" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <!--  Soap out  -->
+            <xs:element name="InsuranceResponse">
+                <xs:complexType>
+                    <xs:simpleContent>
+                        <xs:extension base="xs:string">
+                            <xs:attribute name="amount" type="xs:string"/>
+                            <xs:attribute name="UserID" type="xs:string"/>
+                        </xs:extension>
+                    </xs:simpleContent>
+                </xs:complexType>
+            </xs:element>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="InsuranceRequest">
+        <wsdl:part element="tns:InsuranceRequest" name="InsuranceRequest"> </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="InsuranceResponse">
+        <wsdl:part element="tns:InsuranceResponse" name="InsuranceResponse"> </wsdl:part>
+    </wsdl:message>
+    <wsdl:portType name="InsuranceService">
+        <wsdl:operation name="Insurance">
+            <wsdl:input message="tns:InsuranceRequest" name="InsuranceRequest"> </wsdl:input>
+            <wsdl:output message="tns:InsuranceResponse" name="InsuranceResponse"> </wsdl:output>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="InsuranceServiceSoap11" type="tns:InsuranceService">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="Insurance">
+            <soap:operation soapAction=""/>
+            <wsdl:input name="InsuranceRequest">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="InsuranceResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="InsuranceServiceService">
+        <wsdl:port binding="tns:InsuranceServiceSoap11" name="InsuranceServiceSoap11">
+            <soap:address location="http://localhost:8080/spring-ws-insurance/insuranceService"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

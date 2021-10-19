@@ -19,10 +19,12 @@
 
     <!-- Add componet scan element -->
 
-     <context:component-scan base-package="com.nicordesigns.ws" />
+     <context:component-scan base-package="com.nicordesigns.*" />
 
     <!-- Add dynamic wsdl element -->
-    <sws:dynamic-wsdl id="getInsurance" portTypeName="InsuranceService" locationUri="insuranceService" targetNamespace="http://nicordesigns.com/spring-ws-insurance">
+    <sws:dynamic-wsdl id="getInsurance" portTypeName="InsuranceService"
+                      locationUri="http://localhost:8080/spring-ws-insurance/insuranceService"
+                      targetNamespace="http://nicordesigns.com/spring-ws-insurance">
         <sws:xsd location="/WEB-INF/xsd/insuranceapplication.xsd"/>
     </sws:dynamic-wsdl>
 

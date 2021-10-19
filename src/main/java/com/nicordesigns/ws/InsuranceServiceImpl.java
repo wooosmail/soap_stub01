@@ -22,8 +22,9 @@ public class InsuranceServiceImpl implements InsuranceService {
     public InsuranceResponse processInsuranceApplication(InsuranceRequest insuranceApplication) {
         InsuranceResponse insuranceResponse = new InsuranceResponse();
 
+        insuranceResponse.setValue("?");
         insuranceResponse.setAmount("999,999");
         insuranceResponse.setUserID("191765");
-        return null;
+        return insuranceResponse;
     }
 }

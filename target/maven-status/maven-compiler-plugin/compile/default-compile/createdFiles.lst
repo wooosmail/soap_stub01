@@ -1,6 +1,15 @@
 com/nicordesigns/spring_ws_insurance/InsuranceRequest.class
+com/nicordesigns/ws/InsuranceServiceImpl.class
 com/nicordesigns/spring_ws_insurance/ObjectFactory.class
+com/nicordesigns/ws/WidgetInfoType.class
 com/nicordesigns/spring_ws_insurance/InsuranceResponse.class
-com/nicordesigns/spring_ws_insurance/ApplicantType.class
+com/nicordesigns/ws/ApplicantType.class
 com/nicordesigns/spring_ws_insurance/package-info.class
+com/nicordesigns/ws/InsuranceRequest.class
+com/nicordesigns/ws/package-info.class
 com/nicordesigns/spring_ws_insurance/WidgetInfoType.class
+com/nicordesigns/ws/InsuranceWSEndpoint.class
+com/nicordesigns/ws/InsuranceResponse.class
+com/nicordesigns/spring_ws_insurance/ApplicantType.class
+com/nicordesigns/ws/InsuranceService.class
+com/nicordesigns/ws/ObjectFactory.class
