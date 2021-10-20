@@ -1,5 +1,10 @@
 package com.nicordesigns.ws;
 
+
+import com.woosoo.remote.ApplicantType;
+import com.woosoo.remote.InsuranceRequest;
+import com.woosoo.remote.InsuranceResponse;
+import com.woosoo.remote.WidgetInfoType;
 import org.springframework.stereotype.Service;
 
 @Service

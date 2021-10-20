@@ -1,5 +1,7 @@
 package com.nicordesigns.ws;
 
+import com.woosoo.remote.InsuranceRequest;
+import com.woosoo.remote.InsuranceResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
@@ -8,7 +10,7 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 @Endpoint
 public class InsuranceWSEndpoint {
-    private static final String NAMESPACE_URI = "http://nicordesigns.com/spring-ws-insurance";
+    private static final String NAMESPACE_URI = "http://woosoo.com/remote";
 
 
     private InsuranceService insuranceService;
